@@ -1,0 +1,252 @@
+<header class="header__wrapper">
+  <section class="header__banner">
+    <a href="#" class="header__logo"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="23"
+        fill="none"
+        viewBox="0 0 24 23"
+      >
+        <path fill="#FFC000" d="M5.5 13.5L2 5h7.5l-4 8.5z" />
+        <path
+          fill="#000"
+          d="M1.24 18V5h2.32l2.22 7.48L7.98 5h2.38v13H8.64V7.56L6.32 15.4H5.18L2.86 7.56V18H1.24zm11.982 0V5h4.66c1.32 0 2.32.32 3 .96.693.627 1.04 1.547 1.04 2.76 0 2.053-.947 3.26-2.84 3.62l3.34 5.66h-2.14l-3.22-5.54h-2V18h-1.84zm1.84-7.26h2.62c.84 0 1.44-.153 1.8-.46.373-.32.56-.84.56-1.56 0-.707-.187-1.213-.56-1.52-.36-.32-.96-.48-1.8-.48h-2.62v4.02z"
+        /></svg
+    ></a>
+    <nav class="header__nav">
+      <ul class="header__nav-list" role="tree">
+        <li class="header__nav-li">
+          <a href="/" class="header__nav-link">{{link1 | translate}}</a>
+        </li>
+        <li class="header__nav-li">
+          <app-login class="header__nav-link">{{link2 | translate}}</app-login>
+        </li>
+        <li class="header__nav-li" (click)="toggle_menu()">
+          <span
+            [ngClass]="isHidden == true ? 'header__nav-link down' : 'header__nav-link up'"
+            >{{langC | uppercase}}</span
+          >
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
+<section class="subheader__wrapper" [hidden]="isHidden">
+  <div class="subheader__banner">
+    <nav class="subheader__nav">
+      <ul class="subheader__nav-list" role="tree">
+        <li class="subheader__nav-li" (click)="onLanguage('en')">
+          <span class="header__nav-link">English</span>
+        </li>
+        <li class="subheader__nav-li" (click)="onLanguage('es')">
+          <span class="header__nav-link">Spanish</span>
+        </li>
+        <li class="subheader__nav-li" (click)="onLanguage('tr')">
+          <span class="header__nav-link">Turkish</span>
+        </li>
+        <li class="subheader__nav-li" (click)="onLanguage('zh')">
+          <span class="header__nav-link">Chinese</span>
+        </li>
+        <li class="subheader__nav-li" (click)="onLanguage('af')">
+          <span class="header__nav-link">French</span>
+        </li>
+        <li class="subheader__nav-li" (click)="onLanguage('de')">
+          <span class="header__nav-link">German</span>
+        </li>
+        <li class="subheader__nav-li" (click)="onLanguage('ru')">
+          <span class="header__nav-link">Russian</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__container-image">
+      <img src="../../assets/convinced.webp" alt="Still not convinced?" />
+    </div>
+    <div class="hero__container-info">
+      <span>{{text0 | translate}}</span>
+      <h1>
+        {{text1 | translate}}
+        <span
+          ><img
+            src="../../assets/greenstreak.svg"
+            alt="Decorative Paint Mark"
+          />{{text2 | translate}}</span
+        >
+        {{text3 | translate}}
+      </h1>
+      <p>{{text4 | translate}}</p>
+      <div>
+        <app-login><button>{{text5 | translate}}</button></app-login>
+        <p>
+          <app-login
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50" fill="#008E76" />
+              <path
+                fill="#fff"
+                d="M65 49.5c0 .978-.49 1.885-1.286 2.383L44.949 63.615a2.49 2.49 0 01-2.629.02c-.817-.493-1.32-1.41-1.32-2.404V37.767c0-.994.504-1.91 1.32-2.404a2.504 2.504 0 012.629.02l18.765 11.732c.798.498 1.286 1.405 1.286 2.384z"
+              /></svg
+          ></app-login>
+          <app-login>{{text6 | translate}}</app-login>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="langrow">
+  <div class="langrow__container">
+    <h2 class="langrow__container-title">
+      {{text7 | translate}}
+      <span
+        ><img
+          src="../../assets/yellowstreak.svg"
+          alt="Decorative Paint Mark"
+        />{{text8 | translate}}</span
+      >
+    </h2>
+    <div class="langrow__container-content">
+      <app-login
+        ><button class="langrow__container-button0">Turkish</button></app-login
+      >
+      <app-login
+        ><button class="langrow__container-button1">Chinese</button></app-login
+      >
+      <app-login
+        ><button class="langrow__container-button2">French</button></app-login
+      >
+      <app-login
+        ><button class="langrow__container-button3">German</button></app-login
+      >
+      <app-login
+        ><button class="langrow__container-button4">Other</button></app-login
+      >
+    </div>
+  </div>
+</section>
+<section class="community">
+  <div class="community__container">
+    <div class="community__container-image">
+      <img src="../../assets/greenshirt.webp" alt="green shirt" />
+    </div>
+    <div class="community__container-info">
+      <h2>
+        <span
+          ><img
+            src="../../assets/greenstreak.svg"
+            alt="Decorative Paint Mark"
+          />{{text9 | translate}}</span
+        >
+        {{text10 | translate}}
+      </h2>
+      <p>
+        {{text11 | translate}}
+      </p>
+      <app-login><button>{{text12 | translate}}</button></app-login>
+    </div>
+  </div>
+</section>
+<section class="explain">
+  <div class="explain__container" style="align-content: flex-end;">
+    <div class="explain__container-image">
+      <img src="../../assets/buttonshirt.webp" alt="button up shirt" />
+      <div class="placeholder">&nbsp;</div>
+    </div>
+    <div class="explain__container-info">
+      <h2>
+        {{text13 | translate}}
+        <span
+          ><img
+            src="../../assets/yellowstreak.svg"
+            alt="Decorative Paint Mark"
+          />{{text14 | translate}}</span
+        >
+      </h2>
+      <p>{{text15 | translate}}</p>
+      <ol>
+        <li>{{text16 | translate}}</li>
+        <li>{{text17 | translate}}</li>
+        <li>{{text18 | translate}}</li>
+        <li>{{text19 | translate}}</li>
+      </ol>
+      <app-login><button>{{text20 | translate}}</button></app-login>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="testimonials__container">
+    <h2>{{text21 | translate}}</h2>
+    <p>{{text22 | translate}}</p>
+    <div class="testimonials__container-row">
+      <div class="testimonials__container-col">
+        <div>
+          <img
+            src="../../assets/cnet.webp"
+            alt="c|net Logo"
+            class="testimonials__container-img0"
+          />
+        </div>
+        <p>
+          "{{text23 | translate}}"
+        </p>
+      </div>
+      <div class="testimonials__container-col">
+        <div>
+          <img
+            src="../../assets/traveler.webp"
+            alt="Traveler Logo"
+            class="testimonials__container-img1"
+          />
+        </div>
+        <p>"{{text24 | translate}}"</p>
+      </div>
+      <div class="testimonials__container-col">
+        <div>
+          <img
+            src="../../assets/play.webp"
+            alt="Google Play Logo"
+            class="testimonials__container-img2"
+          />
+        </div>
+        <p>"{{text25 | translate}} - Google Play Awards 2017"</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="more">
+  <div class="more__container">
+    <h2>{{text26 | translate}}</h2>
+    <app-login><button>{{text27 | translate}}</button></app-login>
+  </div>
+</section>
+<footer class="footer__wrapper">
+  <section class="footer__banner">
+    <a href="https://www.maverickcer.dev" class="footer__logo"
+      >{{text28 | translate}} MaverickCER</a
+    >
+    <nav class="footer__nav">
+      <ul class="footer__nav-list" role="tree">
+        <li class="footer__nav-li">
+          <a
+            href="https://www.maverickcer.dev"
+            target="_blank"
+            rel="noreferrer"
+            class="footer__nav-link"
+            >Angular 11</a
+          >
+        </li>
+        <li class="footer__nav-li">
+          <a
+            href="https://dribbble.com/shots/15206993/attachments/6951458?mode=media"
+            target="_blank"
+            rel="noreferrer"
+            class="footer__nav-link"
+            >{{text29 | translate}} Ofsp_ce</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </section>
+</footer>

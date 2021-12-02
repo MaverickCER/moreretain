@@ -1,0 +1,6 @@
+<button class="btn" *ngIf="!started" (click)="start()">
+  <mic-svg></mic-svg>
+</button>
+<button class="btn" *ngIf="started" (click)="stop()">
+  <mute-svg></mute-svg>
+</button>

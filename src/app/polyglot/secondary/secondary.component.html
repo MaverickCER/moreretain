@@ -1,0 +1,26 @@
+<textarea
+  class="form-textarea"
+  [(ngModel)]="GoogleObj.result"
+  placeholder="How it translates to their language!"
+></textarea
+><br />
+<div class="grid tl">
+  <recog
+    class="grid-item 1/5"
+    [voice]="GoogleObj.voice1"
+    [(content)]="GoogleObj.result"
+  ></recog>
+  <synth
+    class="grid-item 1/5"
+    [voice]="GoogleObj.voice1"
+    [content]="GoogleObj.result"
+  ></synth>
+  <copy class="grid-item 1/5" [content]="GoogleObj.result"></copy>
+  <div class="grid-item 1/5"></div>
+  <div class="grid-item 1/5 tr">
+    <button class="btn" (click)="clear()">
+      <trash-svg></trash-svg>
+    </button>
+  </div>
+</div>
+<br />

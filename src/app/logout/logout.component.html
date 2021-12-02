@@ -1,0 +1,72 @@
+<header class="header__wrapper">
+  <section class="header__banner">
+    <span (click)="logout()" class="header__logo">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="23"
+        fill="none"
+        viewBox="0 0 24 23"
+      >
+        <path fill="#FFC000" d="M5.5 13.5L2 5h7.5l-4 8.5z" />
+        <path
+          fill="#000"
+          d="M1.24 18V5h2.32l2.22 7.48L7.98 5h2.38v13H8.64V7.56L6.32 15.4H5.18L2.86 7.56V18H1.24zm11.982 0V5h4.66c1.32 0 2.32.32 3 .96.693.627 1.04 1.547 1.04 2.76 0 2.053-.947 3.26-2.84 3.62l3.34 5.66h-2.14l-3.22-5.54h-2V18h-1.84zm1.84-7.26h2.62c.84 0 1.44-.153 1.8-.46.373-.32.56-.84.56-1.56 0-.707-.187-1.213-.56-1.52-.36-.32-.96-.48-1.8-.48h-2.62v4.02z"
+        />
+      </svg>
+    </span>
+    <nav class="header__nav">
+      <ul class="header__nav-list" role="tree">
+        <li class="header__nav-li">
+          <span (click)="logout()" class="header__nav-link">Log Out</span>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
+<main>
+  <div
+    *ngIf="auth.user | async as user; else showLogin"
+    class="logoutcontainer"
+  >
+    <div>
+      <h3>Hello {{ user.displayName }}!</h3>
+    </div>
+    <div>
+      <polyglot key="AIzaSyCf0Xy0OnhxlduyEt3K8zP-sOuu-l_u6uA"></polyglot>
+    </div>
+  </div>
+  <ng-template #showLogin>
+    <div class="logoutcontainer">
+      <p>Please login and note that app-routing should have redirected you</p>
+      <button (click)="login()">Login with Google</button>
+    </div>
+  </ng-template>
+</main>
+<footer class="footer__wrapper">
+  <section class="footer__banner">
+    <a href="https://www.maverickcer.dev" class="footer__logo">MaverickCER</a>
+    <nav class="footer__nav">
+      <ul class="footer__nav-list" role="tree">
+        <li class="footer__nav-li">
+          <a
+            href="https://www.maverickcer.dev"
+            target="_blank"
+            rel="noreferrer"
+            class="footer__nav-link"
+            >Angular 11</a
+          >
+        </li>
+        <li class="footer__nav-li">
+          <a
+            href="https://dribbble.com/shots/15206993/attachments/6951458?mode=media"
+            target="_blank"
+            rel="noreferrer"
+            class="footer__nav-link"
+            >Ofsp_ce</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </section>
+</footer>

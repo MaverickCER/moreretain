@@ -1,0 +1,11 @@
+<select class="form-select" [(ngModel)]="GoogleObj.voice1">
+  <option [ngValue]="null" disabled>Their Language</option>
+  <option *ngIf="voices.length == 0" [ngValue]="null" disabled>
+    Loading...
+  </option>
+  <ng-container *ngFor="let voice of voices">
+    <option *ngIf="voice.name.indexOf('Microsoft') < 0" [ngValue]="voice"> 
+      {{voice.name.replace("Google ","").replace("Google&nbsp;","")}}
+    </option>
+  </ng-container> 
+</select>

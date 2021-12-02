@@ -1,0 +1,25 @@
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 10px;
+  max-height: fit-content;
+  margin-bottom: 20px;
+}
+.grid3mobile {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 10px;
+}
+.translatecontainer {
+  display: grid;
+  align-content: center;
+}
+@media screen and (max-width: 550px) {
+  .grid3mobile {
+    display: block;
+  }
+  .primarycontainer,
+  .translatecontainer {
+    margin-bottom: 20px;
+  }
+}

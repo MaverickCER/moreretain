@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3800 380">
+  <g>    
+    <path fill="#FFFFFF" d="M 3800 0 C 2800 0 2800 380 1900 380 L 3800 380 Z"/>
+    <path fill="#FFFFFF" d="M 0 0 C 1000 0 1000 380 1900 380 L 0 380 Z"/>
+  </g>
+</svg>
+<!--
+  Single middle wave
+    <path fill="#FFFFFF" d="M 3800 380 C 2800 380 2800 0 1900 0 L 1900 380 Z"/>
+    <path fill="#FFFFFF" d="M 0 380 C 1000 380 1000 0 1900 0 L 1900 380 Z"/>
+-->

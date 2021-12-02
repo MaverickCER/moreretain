@@ -1,0 +1,14 @@
+svg {
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+svg.repeat {
+  width: 28px;
+  height: 28px;
+}
+svg.translate {
+  width: 28px;
+  height: 28px;
+}

@@ -1,0 +1,5 @@
+To compare this design against the original, 
+you can either check out the saved image at the 
+path /src/assets/z-inspiration.png 
+or you can go to 
+https://dribbble.com/shots/15206993/attachments/6951458?mode=media
