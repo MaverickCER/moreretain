@@ -100,7 +100,7 @@ Maverick Manasco - @MaverickCER<br/>
 [![CodePen](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Codepen-24.png)](https://codepen.io/maverickcer) 
 [<img src="https://i.imgur.com/QAFF9m4.png" alt="CodeSandbox" width="auto" height="24px">](https://codesandbox.io/u/MaverickCER) 
 [![GitHub](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/GitHub-24.png)](https://github.com/MaverickCER) 
-[![LinkedIn](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Linkedin-24.png)](https://www.linkedin.com/in/maverickcer/) 
+[![LinkedIn](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Linkedin-24.png)](https://www.linkedin.com/in/maverickmanasco/) 
 [![Reddit](https://cdn0.iconfinder.com/data/icons/social-rounded/72/Reddit-24.png)](https://www.reddit.com/user/maverickcer) 
 [![Twitter](https://cdn0.iconfinder.com/data/icons/social-rounded/72/Twitter-24.png)](https://twitter.com/MaverickCER) 
 [![YouTube](https://cdn0.iconfinder.com/data/icons/social-rounded/72/Youtube-24.png)](https://studio.youtube.com/channel/UCkYSvi4dRFcsrSIbE5Sflmg)
