@@ -2147,7 +2147,7 @@ class HomepageComponent {
                     uid: res.user.uid
                 });
             }
-            // this.router.navigateByUrl('/dashboard')
+            this.router.navigateByUrl('/dashboard');
         });
     }
     ngOnInit() {
