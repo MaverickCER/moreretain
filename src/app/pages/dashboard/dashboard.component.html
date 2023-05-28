@@ -17,31 +17,21 @@
     </span>
     <nav class="header__nav">
       <ul class="header__nav-list" role="tree">
-        <li class="header__nav-li">
-          <span (click)="logout()" class="header__nav-link">Log Out</span>
+        <li class="header__nav-li" *ngIf="auth.user | async as userData; else showLogin">
+          <span (click)="logout()" class="header__nav-link ws-nowrap">{{ userData.displayName }} - Log Out</span>
         </li>
       </ul>
     </nav>
   </section>
 </header>
 <main>
-  <div
-    *ngIf="auth.user | async as user; else showLogin"
-    class="logoutcontainer"
-  >
-    <div>
-      <h3>Hello {{ user.displayName }}!</h3>
-    </div>
-    <div>
-      <polyglot key="AIzaSyC8C5_WNvOWNs46wcVJiBwPLbcewJOGNfU"></polyglot>
-    </div>
-  </div>
-  <ng-template #showLogin>
-    <div class="logoutcontainer">
+  <div class="container">
+    <polyglot *ngIf="user" [user]="user"></polyglot>
+    <ng-template #showLogin>
       <p>Please login and note that app-routing should have redirected you</p>
       <button (click)="login()">Login with Google</button>
-    </div>
-  </ng-template>
+    </ng-template>
+  </div>
 </main>
 <footer class="footer__wrapper">
   <section class="footer__banner">

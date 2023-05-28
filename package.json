@@ -1,5 +1,5 @@
 {
-  "name": "morerise-language-learning",
+  "name": "moreretain-language-learning",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -28,7 +28,8 @@
     "@types/webspeechapi": "0.0.29",
     "core-js": "3.8.3",
     "firebase": "8.6.3",
-    "rxjs": "6.6.3",
+    "ngx-paypal": "^7.0.0",
+    "rxjs": "^6.6.3",
     "tslib": "2.1.0",
     "zone.js": "0.11.3"
   },

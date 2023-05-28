@@ -1,0 +1,48 @@
+button {
+  position: relative;
+  margin: 0;
+  padding: 0.3em 0.5em 0.4em;
+  border: 1px solid #b7b7b8;
+  border-radius: 0.2em 0.2em 0 0;
+  box-shadow: 0 0 0.2em #b7b7b8;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  background: #edeff3;
+}
+button:hover::before, button:focus::before, button[aria-selected='true']::before {
+  position: absolute;
+  bottom: 100%;
+  right: -1px;
+  left: -1px;
+  border-radius: 0.2em 0.2em 0 0;
+  border-top: 3px solid #f05305;
+  content: '';
+}
+button[aria-selected='true'] {
+  border-radius: 0;
+  background: #fbfcfe;
+  outline: 0;
+}
+button[aria-selected='true']:not(:focus):not(:hover)::before {
+  border-top: 5px solid #055bf0;
+}
+button[aria-selected='true']::after {
+  position: absolute;
+  z-index: 3;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+  height: 0.3em;
+  background: #fbfcfe;
+  box-shadow: none;
+  content: '';
+}
+button:hover, button:focus, button:active {
+  outline: 0;
+  border-radius: 0;
+  color: inherit;
+}
+button:hover::before, button:focus::before {
+  border-color: #f05305;
+}

@@ -1,26 +1,16 @@
-<textarea
-  class="form-textarea"
-  [(ngModel)]="GoogleObj.q"
-  placeholder="What you want to say..."
-></textarea
-><br />
+<label>
+  <p class="primary-label">What you want to say...</p>
+  <textarea class="form-textarea" [(ngModel)]="q"></textarea>
+</label>
+<br />
 <div class="grid tl">
-  <recog
-    class="grid-item 1/5"
-    [voice]="GoogleObj.voice0"
-    [(content)]="GoogleObj.q"
-  ></recog>
-  <synth
-    class="grid-item 1/5"
-    [voice]="GoogleObj.voice0"
-    [content]="GoogleObj.q"
-  ></synth>
-  <copy class="grid-item 1/5" [content]="GoogleObj.q"></copy>
+  <recog class="grid-item 1/5" [voice]="googleObj.voice0" [(content)]="googleObj.q"></recog>
+  <synth class="grid-item 1/5" [voice]="googleObj.voice0" [content]="googleObj.q"></synth>
+  <copy class="grid-item 1/5" [content]="googleObj.q"></copy>
   <div class="grid-item 1/5"></div>
   <div class="grid-item 1/5 tr">
     <button class="btn" (click)="clear()">
       <trash-svg></trash-svg>
     </button>
   </div>
-  <br />
 </div>

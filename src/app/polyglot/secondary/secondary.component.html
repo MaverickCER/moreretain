@@ -1,21 +1,12 @@
-<textarea
-  class="form-textarea"
-  [(ngModel)]="GoogleObj.result"
-  placeholder="How it translates to their language!"
-></textarea
-><br />
+<label>
+  <p class="secondary-label">How it translates to their language!</p>
+  <textarea class="form-textarea" [(ngModel)]="result"></textarea>
+</label>
+<br />
 <div class="grid tl">
-  <recog
-    class="grid-item 1/5"
-    [voice]="GoogleObj.voice1"
-    [(content)]="GoogleObj.result"
-  ></recog>
-  <synth
-    class="grid-item 1/5"
-    [voice]="GoogleObj.voice1"
-    [content]="GoogleObj.result"
-  ></synth>
-  <copy class="grid-item 1/5" [content]="GoogleObj.result"></copy>
+  <recog class="grid-item 1/5" [voice]="googleObj.voice1" [(content)]="googleObj.result"></recog>
+  <synth class="grid-item 1/5" [voice]="googleObj.voice1" [content]="googleObj.result"></synth>
+  <copy class="grid-item 1/5" [content]="googleObj.result"></copy>
   <div class="grid-item 1/5"></div>
   <div class="grid-item 1/5 tr">
     <button class="btn" (click)="clear()">
@@ -23,4 +14,3 @@
     </button>
   </div>
 </div>
-<br />

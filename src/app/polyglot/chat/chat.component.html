@@ -1,0 +1,31 @@
+<small>Click each message to translate it as needed!</small>
+<div class="messages">
+  <ng-container *ngFor="let message of messages; let i = index">
+    <div class="message">
+      <small>
+        <ng-container *ngIf="message.user.uid === user.uid">
+          <button class="btn" (click)="delete(i)">
+            <trash-svg></trash-svg>
+          </button>
+        </ng-container>
+        <ng-container *ngIf="message.user.uid !== user.uid">
+          <img class="profileURL" src={{message.user.photoURL}} />
+        </ng-container>
+        <synth [voice]="googleObj.voice1" [content]="message.message"></synth>
+        {{message[googleObj.source] || googleObj.source === googleObj.target ? 0 : -message.message.length}}&nbsp;{{message.user.displayName}}:
+      </small>
+      <button class="content" (click)="reveal(i)">{{message.revealed ? message[googleObj.source] ? message[googleObj.source] : message.message : message.message}}</button>
+    </div>
+  </ng-container>
+</div>
+<br/>
+<recog [voice]="googleObj.voice1" [(content)]="result"></recog>
+<br/>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label>
+    <p class="chat-label">Only send messages in their language!</p>
+    <input type="text" aria-autocomplete="none" autocomplete="off" name="chat-input" [(ngModel)]="result" />
+  </label>
+
+  <input type="submit" label="Submit" />
+</form>

@@ -4,7 +4,7 @@
     Loading...
   </option>
   <ng-container *ngFor="let voice of voices">
-    <option *ngIf="voice.name.indexOf('Microsoft') < 0" [ngValue]="voice">
+    <option [ngValue]="voice">
       {{voice.name.replace("Google ","").replace("Google&nbsp;","")}}
     </option>
   </ng-container>

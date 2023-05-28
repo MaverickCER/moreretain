@@ -1,6 +1,9 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireDatabase } from '@angular/fire/database';
+import firebase from 'firebase/app';
 
 @Component({
   selector: "app-homepage",
@@ -8,7 +11,22 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrls: ["./homepage.component.css"]
 })
 export class HomepageComponent {
-  constructor(private translate: TranslateService, private router: Router) {}
+  constructor(public auth: AngularFireAuth, public db: AngularFireDatabase, private translate: TranslateService, private router: Router) {}
+  login(e: Event) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((res) => {
+      if (res.user.metadata.creationTime === res.user.metadata.lastSignInTime) {
+        this.db.list(`users`).set(res.user.uid, {
+          characters: 1000,
+          displayName: res.user.displayName,
+          photoURL: res.user.photoURL,
+          uid: res.user.uid
+        });
+      }
+      // this.router.navigateByUrl('/dashboard')
+    });
+  }
 
   langC: string = "en";
   langN: string = "current";

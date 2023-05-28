@@ -61,7 +61,7 @@
   display: inline-block;
   margin-left: 0.5rem;
   content: " ";
-  background-image: url("../../assets/carret.svg");
+  background-image: url("../../../assets/carret.svg");
   background-size: 0.7rem;
   background-repeat: no-repeat;
   height: 0.7rem;
@@ -78,7 +78,7 @@
   display: inline-block;
   margin-left: 0.5rem;
   content: " ";
-  background-image: url("../../assets/carret.svg");
+  background-image: url("../../../assets/carret.svg");
   background-size: 0.7rem;
   background-repeat: no-repeat;
   height: 0.7rem;
@@ -250,7 +250,7 @@
   flex-direction: row;
 }
 
-.hero__container-info > div button {
+.hero__container-info > div a.header__nav-link {
   background: #f0a400;
   color: #fff;
   border: none;
@@ -262,18 +262,18 @@
   font-weight: bold;
 }
 
-.hero__container-info > div > p {
+.hero__container-info > div > a > p {
   border: none;
   border-radius: 0.3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  margin: 0.2rem 0 0 2rem;
+  margin: 0.2rem 0 0 1rem;
   cursor: pointer;
 }
 
-.hero__container-info > div > p svg {
+.hero__container-info > div > a > p svg {
   height: 1.6rem;
   width: auto;
   filter: drop-shadow(0.4rem 0.8rem 0.2rem rgba(0, 142, 118, 0.2));
@@ -458,7 +458,7 @@
   width: auto;
 }
 
-.community__container-info button {
+.community__container-info a {
   background: #f0a400;
   color: #fff;
   border: none;
@@ -466,6 +466,7 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: bold;
+  width: fit-content;
 }
 
 @media screen and (max-width: 768px) {
@@ -558,7 +559,7 @@
   padding: 0.25rem;
 }
 
-.explain__container-info button {
+.explain__container-info a {
   background: #f0a400;
   color: #fff;
   border: none;
@@ -568,6 +569,7 @@
   box-shadow: 0.4rem 0.8rem 0.4rem 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-weight: bold;
+  width: fit-content;
 }
 
 @media screen and (max-width: 768px) {
@@ -705,12 +707,12 @@
   text-align: center;
 }
 
-.more__container button {
+.more__container a {
   background: #fff;
   color: #000;
   border: none;
   border-radius: 0.3rem;
-  padding: 1rem 1rem;
+  padding: .5rem 1rem;
   -webkit-box-shadow: 0.4rem 0.8rem 0.2rem 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0.4rem 0.5rem 0.2rem 0px rgba(0, 0, 0, 0.05);
   cursor: pointer;

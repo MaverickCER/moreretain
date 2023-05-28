@@ -1,9 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { AppComponent } from "./app.component";
-import { HomepageComponent } from "./homepage/homepage.component";
-import { LoginComponent } from "./login/login.component";
-import { LogoutComponent } from "./logout/logout.component";
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AngularFireModule } from "@angular/fire";
 import { SETTINGS as AUTH_SETTINGS } from "@angular/fire/auth";
 import { environment } from "../environments/environment";
@@ -36,9 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   declarations: [
     AppComponent,
-    HomepageComponent,
-    LoginComponent,
-    LogoutComponent
+    DashboardComponent,
+    HomepageComponent
   ],
   providers: [
     {

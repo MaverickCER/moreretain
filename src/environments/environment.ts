@@ -5,6 +5,7 @@
 
 export const environment = {
   production: false,
+  clientId: "ASqHl3g6tveMC8S1X_cTYNitt9Pi_N2KeUEhb1pDxqgQ-jHDYuUIUPYYWHj_DQpkaOLnh-cMcyOux4xU",
   firebase: {
     apiKey: "AIzaSyBHjt1Mo-ASg8LhisrPlVT5JVYdEgoal1s",
     authDomain: "fbpolyglot.firebaseapp.com",

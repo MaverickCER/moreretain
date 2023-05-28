@@ -6,22 +6,21 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./secondary.component.less"]
 })
 export class SecondaryComponent {
-  GoogleObj: any = {};
-  @Output() googleObjChange = new EventEmitter<number>();
+  @Input() googleObj: any = {};
+  @Output() googleObjChange = new EventEmitter<object>();
 
-  @Input()
-  get googleObj() {
-    return this.GoogleObj;
+  get result() {
+    return this.googleObj.result;
   }
 
-  set googleObj(value) {
-    this.GoogleObj = value;
-    this.googleObjChange.emit(this.GoogleObj);
+  set result(value) {
+    this.googleObj.result = new String(value);
+    this.googleObjChange.emit(this.googleObj);
   }
 
   clear() {
-    this.GoogleObj.q = "";
-    this.GoogleObj.result = "";
-    this.googleObjChange.emit(this.GoogleObj);
+    this.googleObj.q = "";
+    this.googleObj.result = "";
+    this.googleObjChange.emit(this.googleObj);
   }
 }

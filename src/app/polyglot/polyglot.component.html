@@ -1,1 +1,81 @@
-<nullary [key]="key"></nullary>
+<main>
+  <div class="tabs">
+    <div
+      role="tablist"
+      aria-label="options"
+      (keyup)="handleKeyUp($event)"
+      (keydown)="handleKeyDown($event)"
+    >
+      <trigger
+        triggerId="trigger-a"
+        panelId="panel-a"
+        [isActive]="activated === 0"
+        (click)="activatePanel(0)"
+      >
+        Learn
+      </trigger>
+      <trigger
+        triggerId="trigger-b"
+        panelId="panel-b"
+        [isActive]="activated === 1"
+        (click)="activatePanel(1)"
+      >
+        Practice
+      </trigger>
+      <trigger
+        triggerId="trigger-c"
+        panelId="panel-c"
+        [isActive]="activated === 2"
+        (click)="activatePanel(2)"
+      >
+        Immerse
+      </trigger>
+    </div>
+
+    <panel
+      *ngIf="activated === 0"
+      panelId="panel-a"
+      triggerId="trigger-a"
+    >
+      <br/>
+      <div class="grid3">
+        <primarylang [voices]="voices" [googleObj]="googleObj"></primarylang>
+        <swap [googleObj]="googleObj"></swap>
+        <secondarylang [voices]="voices" [googleObj]="googleObj"></secondarylang>
+      </div>
+      <circuit [voices]="voices" [googleObj]="googleObj" [user]="user"></circuit>
+    </panel>
+    <panel
+      *ngIf="activated === 1"
+      panelId="panel-b"
+      triggerId="trigger-b"
+    >
+      <br/>
+      <div class="grid3">
+        <primarylang [voices]="voices" [googleObj]="googleObj"></primarylang>
+        <swap [googleObj]="googleObj"></swap>
+        <secondarylang [voices]="voices" [googleObj]="googleObj"></secondarylang>
+      </div>
+      <!-- <spelling [voices]="voices" [googleObj]="googleObj"></spelling> -->
+      <cards [voices]="voices" [googleObj]="googleObj"  [user]="user"></cards>
+      <small>Notice: Practice mode only uses phrases from your history.<br/>You can add more phrases by learning new translations or immersing yourself in the chat rooms.</small>
+    </panel>
+    <panel
+      *ngIf="activated === 2"
+      panelId="panel-c"
+      triggerId="trigger-c"
+    >
+      <br/>
+      <div class="grid3">
+        <primarylang [voices]="voices" [googleObj]="googleObj"></primarylang>
+        <swap [googleObj]="googleObj"></swap>
+        <secondarylang [voices]="voices" [googleObj]="googleObj"></secondarylang>
+      </div>
+      <chat [voices]="voices" [googleObj]="googleObj" [user]="user"></chat>
+    </panel>
+    <div class="PayPal">
+      <small>{{ user.characters }} characters remain. You can get 2500 more for $0.99 USD using the buttons below!</small>
+      <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+    </div>
+  </div>
+</main>

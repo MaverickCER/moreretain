@@ -1,0 +1,24 @@
+<small class="centered">Click to show translation, DoubleClick to change cards</small>
+<div class="cards">
+  <div [ngClass]="{'card ': true, 'revealed': revealed}" (click)="singleClick()" (dblclick)="doubleClick()">
+    <div class="front">
+      {{ cardFront }}
+    </div>
+    <div class="back">
+      {{ cardBack }}
+    </div>
+  </div>
+</div>
+<br/>
+<recog *ngIf="!revealed" [voice]="googleObj.voice0" [(content)]="result"></recog>
+<recog *ngIf="revealed" [voice]="googleObj.voice1" [(content)]="result"></recog>
+<synth *ngIf="!revealed" [voice]="googleObj.voice1" [content]="cardFront"></synth>
+<synth *ngIf="revealed" [voice]="googleObj.voice0" [content]="cardBack"></synth>
+<br/>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label>
+    <p class="cards-label">Use this input to practice spelling or pronunciation</p>
+    <input type="text" placeholder={{placeholder}} aria-autocomplete="none" autocomplete="off" name="cards-input" [(ngModel)]="result" />
+  </label>
+  <input type="submit" label="Submit" />
+</form>

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/morerise-language-learning'),
+      dir: require('path').join(__dirname, './coverage/MoreRetain-language-learning'),
       subdir: '.',
       reporters: [
         { type: 'html' },

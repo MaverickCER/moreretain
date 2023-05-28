@@ -17,16 +17,22 @@
     <nav class="header__nav">
       <ul class="header__nav-list" role="tree">
         <li class="header__nav-li">
-          <a href="https://maverickcer.github.io/morerise/" class="header__nav-link">{{link1 | translate}}</a>
+          <a href="https://maverickcer.github.io/MoreRetain/" class="header__nav-link">{{
+            link1 | translate
+          }}</a>
         </li>
         <li class="header__nav-li">
-          <app-login class="header__nav-link">{{link2 | translate}}</app-login>
+          <a
+            href="https://maverickcer.github.io/MoreRetain/"
+            class="header__nav-link"
+            (click)="login($event)"
+            >{{ link2 | translate }}</a
+          >
         </li>
         <li class="header__nav-li" (click)="toggle_menu()">
-          <span
-            [ngClass]="isHidden == true ? 'header__nav-link down' : 'header__nav-link up'"
-            >{{langC | uppercase}}</span
-          >
+          <span [ngClass]="isHidden == true ? 'header__nav-link down' : 'header__nav-link up'">{{
+            langC | uppercase
+          }}</span>
         </li>
       </ul>
     </nav>
@@ -67,31 +73,38 @@
       <img src="assets/convinced.webp" alt="Still not convinced?" />
     </div>
     <div class="hero__container-info">
-      <span>{{text0 | translate}}</span>
+      <span>{{ text0 | translate }}</span>
       <h1>
-        {{text1 | translate}}
+        {{ text1 | translate }}
         <span
-          ><img
-            src="assets/greenstreak.svg"
-            alt="Decorative Paint Mark"
-          />{{text2 | translate}}</span
+          ><img src="assets/greenstreak.svg" alt="Decorative Paint Mark" />{{
+            text2 | translate
+          }}</span
         >
-        {{text3 | translate}}
+        {{ text3 | translate }}
       </h1>
-      <p>{{text4 | translate}}</p>
+      <p>{{ text4 | translate }}</p>
       <div>
-        <app-login><button>{{text5 | translate}}</button></app-login>
+        <a
+          href="https://maverickcer.github.io/MoreRetain/"
+          class="header__nav-link"
+          (click)="login($event)"
+          >{{ text5 | translate }}</a
+        >
+        <a
+          href="https://maverickcer.github.io/MoreRetain/"
+          (click)="login($event)"
+          >
         <p>
-          <app-login
-            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50" fill="#008E76" />
               <path
                 fill="#fff"
                 d="M65 49.5c0 .978-.49 1.885-1.286 2.383L44.949 63.615a2.49 2.49 0 01-2.629.02c-.817-.493-1.32-1.41-1.32-2.404V37.767c0-.994.504-1.91 1.32-2.404a2.504 2.504 0 012.629.02l18.765 11.732c.798.498 1.286 1.405 1.286 2.384z"
               /></svg
-          ></app-login>
-          <app-login>{{text6 | translate}}</app-login>
-        </p>
+          >{{ text6 | translate }}
+        </p></a
+        >
       </div>
     </div>
   </div>
@@ -99,30 +112,21 @@
 <section class="langrow">
   <div class="langrow__container">
     <h2 class="langrow__container-title">
-      {{text7 | translate}}
+      {{ text7 | translate }}
       <span
-        ><img
-          src="assets/yellowstreak.svg"
-          alt="Decorative Paint Mark"
-        />{{text8 | translate}}</span
+        ><img src="assets/yellowstreak.svg" alt="Decorative Paint Mark" />{{
+          text8 | translate
+        }}</span
       >
     </h2>
     <div class="langrow__container-content">
-      <app-login
-        ><button class="langrow__container-button0">Turkish</button></app-login
-      >
-      <app-login
-        ><button class="langrow__container-button1">Chinese</button></app-login
-      >
-      <app-login
-        ><button class="langrow__container-button2">French</button></app-login
-      >
-      <app-login
-        ><button class="langrow__container-button3">German</button></app-login
-      >
-      <app-login
-        ><button class="langrow__container-button4">Other</button></app-login
-      >
+      <button (click)="onLanguage('en')" class="langrow__container-button0">English</button>
+      <button (click)="onLanguage('es')" class="langrow__container-button0">Spanish</button>
+      <button (click)="onLanguage('tr')" class="langrow__container-button0">Turkish</button>
+      <button (click)="onLanguage('zh')" class="langrow__container-button1">Chinese</button>
+      <button (click)="onLanguage('af')" class="langrow__container-button2">French</button>
+      <button (click)="onLanguage('de')" class="langrow__container-button3">German</button>
+      <button (click)="onLanguage('ru')" class="langrow__container-button4">Russian</button>
     </div>
   </div>
 </section>
@@ -134,63 +138,65 @@
     <div class="community__container-info">
       <h2>
         <span
-          ><img
-            src="assets/greenstreak.svg"
-            alt="Decorative Paint Mark"
-          />{{text9 | translate}}</span
+          ><img src="assets/greenstreak.svg" alt="Decorative Paint Mark" />{{
+            text9 | translate
+          }}</span
         >
-        {{text10 | translate}}
+        {{ text10 | translate }}
       </h2>
       <p>
-        {{text11 | translate}}
+        {{ text11 | translate }}
       </p>
-      <app-login><button>{{text12 | translate}}</button></app-login>
+      <a
+      href="https://maverickcer.github.io/MoreRetain/"
+      class="header__nav-link"
+      (click)="login($event)"
+      >{{ text12 | translate }}</a
+    >
     </div>
   </div>
 </section>
 <section class="explain">
-  <div class="explain__container" style="align-content: flex-end;">
+  <div class="explain__container" style="align-content: flex-end">
     <div class="explain__container-image">
       <img src="assets/buttonshirt.webp" alt="button up shirt" />
       <div class="placeholder">&nbsp;</div>
     </div>
     <div class="explain__container-info">
       <h2>
-        {{text13 | translate}}
+        {{ text13 | translate }}
         <span
-          ><img
-            src="assets/yellowstreak.svg"
-            alt="Decorative Paint Mark"
-          />{{text14 | translate}}</span
+          ><img src="assets/yellowstreak.svg" alt="Decorative Paint Mark" />{{
+            text14 | translate
+          }}</span
         >
       </h2>
-      <p>{{text15 | translate}}</p>
+      <p>{{ text15 | translate }}</p>
       <ol>
-        <li>{{text16 | translate}}</li>
-        <li>{{text17 | translate}}</li>
-        <li>{{text18 | translate}}</li>
-        <li>{{text19 | translate}}</li>
+        <li>{{ text16 | translate }}</li>
+        <li>{{ text17 | translate }}</li>
+        <li>{{ text18 | translate }}</li>
+        <li>{{ text19 | translate }}</li>
       </ol>
-      <app-login><button>{{text20 | translate}}</button></app-login>
+      <a
+      href="https://maverickcer.github.io/MoreRetain/"
+      class="header__nav-link"
+      (click)="login($event)"
+      >{{ text20 | translate }}</a
+    >
     </div>
   </div>
 </section>
 <section class="testimonials">
   <div class="testimonials__container">
-    <h2>{{text21 | translate}}</h2>
-    <p>{{text22 | translate}}</p>
+    <h2>{{ text21 | translate }}</h2>
+    <p>{{ text22 | translate }}</p>
     <div class="testimonials__container-row">
       <div class="testimonials__container-col">
         <div>
-          <img
-            src="assets/cnet.webp"
-            alt="c|net Logo"
-            class="testimonials__container-img0"
-          />
+          <img src="assets/cnet.webp" alt="c|net Logo" class="testimonials__container-img0" />
         </div>
-        <p>
-          "{{text23 | translate}}"
-        </p>
+        <p>"{{ text23 | translate }}"</p>
       </div>
       <div class="testimonials__container-col">
         <div>
@@ -200,31 +206,32 @@
             class="testimonials__container-img1"
           />
         </div>
-        <p>"{{text24 | translate}}"</p>
+        <p>"{{ text24 | translate }}"</p>
       </div>
       <div class="testimonials__container-col">
         <div>
-          <img
-            src="assets/play.webp"
-            alt="Google Play Logo"
-            class="testimonials__container-img2"
-          />
+          <img src="assets/play.webp" alt="Google Play Logo" class="testimonials__container-img2" />
         </div>
-        <p>"{{text25 | translate}} - Google Play Awards 2017"</p>
+        <p>"{{ text25 | translate }} - Google Play Awards 2017"</p>
       </div>
     </div>
   </div>
 </section>
 <section class="more">
   <div class="more__container">
-    <h2>{{text26 | translate}}</h2>
-    <app-login><button>{{text27 | translate}}</button></app-login>
+    <h2>{{ text26 | translate }}</h2>
+    <a
+    href="https://maverickcer.github.io/MoreRetain/"
+    class="header__nav-link"
+    (click)="login($event)"
+    >{{ text27 | translate }}</a
+  >
   </div>
 </section>
 <footer class="footer__wrapper">
   <section class="footer__banner">
     <a href="https://www.maverickcer.dev" class="footer__logo"
-      >{{text28 | translate}} MaverickCER</a
+      >{{ text28 | translate }} MaverickCER</a
     >
     <nav class="footer__nav">
       <ul class="footer__nav-list" role="tree">
@@ -243,7 +250,7 @@
             target="_blank"
             rel="noreferrer"
             class="footer__nav-link"
-            >{{text29 | translate}} Ofsp_ce</a
+            >{{ text29 | translate }} Ofsp_ce</a
           >
         </li>
       </ul>

@@ -1,0 +1,69 @@
+input[name="chat-input"] {
+  height: 2.75rem;
+  line-height: 1.5;
+  width: 100%;
+  background-color: field;
+  padding: .5rem;
+  border: 0.0625rem solid #dedede;
+  color: #222;
+  display: block;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+}
+
+form > input[type='submit'] {
+  height: 2.75rem;
+  line-height: 1.5;
+  width: fit-content;
+  background-color: field;
+  padding: .5rem;
+  border: 0.0625rem solid #dedede;
+  color: #222;
+  display: block;
+}
+
+p.chat-label {
+  margin: 0;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.message .profileURL {
+  font-family: inherit;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #444;
+  border: 0;
+  background-color: #dedede;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  object-fit: cover;
+  width: 42.3906px;
+  height: 34.3906px;
+}
+
+.messages .message .content {
+  width: 100%;
+  height: fit-content;
+  text-align: left;
+  border: none;
+  background-color: inherit;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.messages .message svg {
+  display: inline-flex;
+}

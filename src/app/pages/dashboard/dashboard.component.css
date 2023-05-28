@@ -60,13 +60,17 @@
 // ---------------------------------------------------*/
 
 main {
-  padding-top: 3rem;
+  padding-top: 2rem;
   max-width: 100vw;
   min-height: calc(100vh - 11.8rem);
   background: #fafbff;
 }
 
-.logoutcontainer {
+.ws-nowrap {
+  white-space: nowrap;
+}
+
+.container {
   width: 80vw;
   max-width: 1200px;
   margin: auto;

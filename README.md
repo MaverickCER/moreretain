@@ -3,27 +3,27 @@
 *** If would like to help make this IDE design better,
 *** please fork the repo and create a pull request.
 -->
-# Morerise
+# MoreRetain
 <!-- MaverickCER LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/MaverickCER/Morerise/edit/main/README.md">
+  <a href="https://github.com/MaverickCER/MoreRetain/edit/main/README.md">
     <img src="https://i.imgur.com/UHV6ynS.png" alt="Angular Logo" width="auto" height="48px">
   </a>
 
-  <h3 align="center">Morerise README</h3>
+  <h3 align="center">MoreRetain README</h3>
 
   <p align="center">
     A language learning app with a custom design.
     <br />
-    <a href="https://github.com/MaverickCER/Morerise"><strong>Explore the Morerise development code »</strong></a>
+    <a href="https://github.com/MaverickCER/MoreRetain"><strong>Explore the MoreRetain development code »</strong></a>
     <br />
     <br />
     <a href="https://www.maverickcer.dev">View Portfolio</a>
     ·
-    <a href="https://github.com/MaverickCER/Morerise/issues">Report Bug</a>
+    <a href="https://github.com/MaverickCER/MoreRetain/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MaverickCER/Morerise/issues">Request Feature</a>
+    <a href="https://github.com/MaverickCER/MoreRetain/issues">Request Feature</a>
   </p>
 </p>
 
@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Morerise started off as a Google Translate clone and still holds some resemblance in the translation user interface. 
+MoreRetain started off as a Google Translate clone and still holds some resemblance in the translation user interface. 
 As I learned more about how angular works I decided to merge it with another project and create an inexpensive alternative to Rosetta Stone.
 The app utilizes speech to text, text to speech, and google translate to allow the user to practice common phrases or even have a dialogue.
 
@@ -60,8 +60,8 @@ Pros:
 Cons:
 * While usable in it's current form, there is a lot I want to do going forward!
 
-The development code can be found at [https://github.com/MaverickCER/Morerise](https://github.com/MaverickCER/Morerise)<br/>
-The online IDE can be found at [https://codesandbox.io/s/Morerise-t37ey](https://codesandbox.io/s/Morerise-t37ey)<br/>
+The development code can be found at [https://github.com/MaverickCER/MoreRetain](https://github.com/MaverickCER/MoreRetain)<br/>
+The online IDE can be found at [https://codesandbox.io/s/MoreRetain-t37ey](https://codesandbox.io/s/MoreRetain-t37ey)<br/>
 The live site is available at [https://www.maverickcer.dev](https://www.maverickcer.dev)
 
 ### Built With
@@ -74,14 +74,14 @@ The live site is available at [https://www.maverickcer.dev](https://www.maverick
 ## Getting Started
 
 Install [nodejs](https://nodejs.org/)<br/>
-Clone the angular [repo](https://github.com/MaverickCER/Morerise)<br/>
+Clone the angular [repo](https://github.com/MaverickCER/MoreRetain)<br/>
 In your console, navigate to the repo folder and run `npm i"
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See [Issues](https://github.com/MaverickCER/Morerise/issues) for a list of proposed features (and known issues).
+See [Issues](https://github.com/MaverickCER/MoreRetain/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -105,7 +105,7 @@ Maverick Manasco - @MaverickCER<br/>
 [![Twitter](https://cdn0.iconfinder.com/data/icons/social-rounded/72/Twitter-24.png)](https://twitter.com/MaverickCER) 
 [![YouTube](https://cdn0.iconfinder.com/data/icons/social-rounded/72/Youtube-24.png)](https://studio.youtube.com/channel/UCkYSvi4dRFcsrSIbE5Sflmg)
 
-Project Link: [https://github.com/MaverickCER/Morerise](https://github.com/MaverickCER/Morerise)
+Project Link: [https://github.com/MaverickCER/MoreRetain](https://github.com/MaverickCER/MoreRetain)
 
 
 <!-- ACKNOWLEDGEMENTS -->

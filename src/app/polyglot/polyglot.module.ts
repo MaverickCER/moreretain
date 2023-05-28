@@ -3,11 +3,14 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
+import { NgxPayPalModule } from 'ngx-paypal';
 import { SvgModule } from "./svgs/svg.module";
 
 import { PolyglotComponent } from "./polyglot.component";
+import { CardsComponent } from './cards/cards.component';
+import { ChatComponent } from './chat/chat.component';
+import { CircuitComponent } from './circuit/circuit.component';
 import { CopyComponent } from "./copy/copy.component";
-import { NullaryComponent } from "./nullary/nullary.component";
 import { PrimaryComponent } from "./primary/primary.component";
 import { PrimarylangComponent } from "./primarylang/primarylang.component";
 import { RecogComponent } from "./recog/recog.component";
@@ -16,12 +19,17 @@ import { SecondarylangComponent } from "./secondarylang/secondarylang.component"
 import { SwapComponent } from "./swap/swap.component";
 import { SynthComponent } from "./synth/synth.component";
 import { TransComponent } from "./trans/trans.component";
+import { PanelComponent } from "./tabs/panel.component";
+import { TriggerComponent } from "./tabs/trigger.component";
 
 @NgModule({
   declarations: [
     PolyglotComponent,
+    CardsComponent,
+    ChatComponent,
+    CircuitComponent,
     CopyComponent,
-    NullaryComponent,
+    PanelComponent,
     PrimaryComponent,
     PrimarylangComponent,
     RecogComponent,
@@ -29,13 +37,15 @@ import { TransComponent } from "./trans/trans.component";
     SecondarylangComponent,
     SwapComponent,
     SynthComponent,
-    TransComponent
+    TransComponent,
+    TriggerComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     FormsModule,
     SvgModule,
+    NgxPayPalModule,
     SpeechSynthesisModule.forRoot({
       lang: "en",
       volume: 1.0,
@@ -45,13 +55,17 @@ import { TransComponent } from "./trans/trans.component";
   ],
   exports: [
     PolyglotComponent,
+    CardsComponent,
+    ChatComponent,
+    CircuitComponent,
     CopyComponent,
-    NullaryComponent,
+    PanelComponent,
     PrimaryComponent,
     RecogComponent,
     SecondaryComponent,
     SynthComponent,
-    TransComponent
+    TransComponent,
+    TriggerComponent
   ]
 })
 export class PolyglotModule {}
