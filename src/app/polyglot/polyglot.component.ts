@@ -30,7 +30,24 @@ export class PolyglotComponent implements OnInit, AfterViewInit {
     this.initPaypalConfig();
     this.voices = this.svc.getVoices();
     this.svc.onvoiceschanged = () => {
-      this.voices = this.svc.getVoices();
+      let localVoices = this.svc.getVoices();
+      this.voices = localVoices;
+      let source = localVoices.findIndex((voice) => {
+        let language = voice.lang.split('-')[0];
+        if (this.googleObj.source === language) {
+          return true;
+        }
+        return false;
+      });
+      let target = localVoices.findIndex((voice) => {
+        let language = voice.lang.split('-')[0];
+        if (this.googleObj.target === language) {
+          return true;
+        }
+        return false;
+      });
+      this.googleObj.voice0 = localVoices[source || 0] || null;
+      this.googleObj.voice1 = localVoices[target || 0] || null;
     };
   }
 
@@ -92,8 +109,14 @@ export class PolyglotComponent implements OnInit, AfterViewInit {
           purchase_units: [
             {
               amount: {
-                currency_code: 'USD',
-                value: '0.99',
+                  currency_code: 'USD',
+                  value: '0.99',
+                  breakdown: {
+                      item_total: {
+                          currency_code: 'USD',
+                          value: '0.99'
+                      }
+                  }
               },
               items: [
                 {
