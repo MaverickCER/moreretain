@@ -10,8 +10,8 @@
   </div>
 </div>
 <br/>
-<recog *ngIf="!revealed" [voice]="googleObj.voice0" [(content)]="result"></recog>
-<recog *ngIf="revealed" [voice]="googleObj.voice1" [(content)]="result"></recog>
+<recog *ngIf="!revealed" [voice]="googleObj.voice0" [content]="result"></recog>
+<recog *ngIf="revealed" [voice]="googleObj.voice1" [content]="result"></recog>
 <synth *ngIf="!revealed" [voice]="googleObj.voice1" [content]="cardFront"></synth>
 <synth *ngIf="revealed" [voice]="googleObj.voice0" [content]="cardBack"></synth>
 <br/>

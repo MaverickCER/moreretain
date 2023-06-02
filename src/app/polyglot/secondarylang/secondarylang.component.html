@@ -1,4 +1,4 @@
-<select class="form-select" [(ngModel)]="GoogleObj.voice1">
+<select class="form-select" [formControl]="secLang">
   <option [ngValue]="null" disabled>Their Language</option>
   <option *ngIf="voices.length == 0" [ngValue]="null" disabled>
     Loading...

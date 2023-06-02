@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { GoogleObj } from "src/app/models/googleobj.model";
+import { SharedService } from "src/app/shared.service";
 
 @Component({
   selector: "secondary",
@@ -6,21 +8,24 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./secondary.component.less"]
 })
 export class SecondaryComponent {
-  @Input() googleObj: any = {};
-  @Output() googleObjChange = new EventEmitter<object>();
+  googleObj: GoogleObj;
+
+  constructor(private sharedService: SharedService) {
+    this.sharedService.googleObjSubject.subscribe((googleObj: GoogleObj) => this.googleObj = googleObj);
+  }
 
   get result() {
     return this.googleObj.result;
   }
 
   set result(value) {
-    this.googleObj.result = new String(value);
-    this.googleObjChange.emit(this.googleObj);
+    this.googleObj.result = value;
+    this.sharedService.googleObjSubject.next(this.googleObj);
   }
 
   clear() {
     this.googleObj.q = "";
     this.googleObj.result = "";
-    this.googleObjChange.emit(this.googleObj);
+    this.sharedService.googleObjSubject.next(this.googleObj);
   }
 }

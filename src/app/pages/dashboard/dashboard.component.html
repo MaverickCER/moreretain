@@ -26,7 +26,7 @@
 </header>
 <main>
   <div class="container">
-    <polyglot *ngIf="user" [user]="user"></polyglot>
+    <polyglot *ngIf="user"></polyglot>
     <ng-template #showLogin>
       <p>Please login and note that app-routing should have redirected you</p>
       <button (click)="login()">Login with Google</button>

@@ -1,5 +1,7 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { GoogleService } from "../services/google/google.services";
+import { SharedService } from "src/app/shared.service";
+import { GoogleObj } from "src/app/models/googleobj.model";
 
 @Component({
   selector: "swap",
@@ -8,29 +10,24 @@ import { GoogleService } from "../services/google/google.services";
   providers: [GoogleService]
 })
 export class SwapComponent {
-  GoogleObj: any;
-  @Output() googleObjChange = new EventEmitter<number>();
+  
+  googleObj: GoogleObj;
 
-  @Input()
-  get googleObj() {
-    return this.GoogleObj;
+  constructor(private _google: GoogleService, private sharedService: SharedService) {
+    this.sharedService.googleObjSubject.subscribe((googleObj: GoogleObj) => this.googleObj = googleObj);
   }
-
-  set googleObj(value) {
-    this.GoogleObj = value;
-    this.googleObjChange.emit(this.GoogleObj);
-  }
-  constructor(private _google: GoogleService) {}
 
   switch() {
-    let tempLang = this.GoogleObj.source;
-    let tempVoice = this.GoogleObj.voice0;
-    let tempResult = this.GoogleObj.result;
-    this.GoogleObj.source = this.GoogleObj.target;
-    this.GoogleObj.target = tempLang;
-    this.GoogleObj.voice0 = this.GoogleObj.voice1;
-    this.GoogleObj.voice1 = tempVoice;
-    this.GoogleObj.result = this.GoogleObj.q;
-    this.GoogleObj.q = tempResult;
+    let tempLang = this.googleObj.source;
+    let tempVoice = this.googleObj.voice0;
+    let tempResult = this.googleObj.result;
+    this.googleObj.source = this.googleObj.target;
+    this.googleObj.target = tempLang;
+    this.googleObj.voice0 = this.googleObj.voice1;
+    this.googleObj.voice1 = tempVoice;
+    this.googleObj.result = this.googleObj.q;
+    this.googleObj.q = tempResult;
+    this.sharedService.googleObjSubject.next(this.googleObj);
+
   }
 }

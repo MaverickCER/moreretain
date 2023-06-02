@@ -1,7 +1,7 @@
 import { SpeechSynthesisModule } from "@kamiazya/ngx-speech-synthesis";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { NgxPayPalModule } from 'ngx-paypal';
 import { SvgModule } from "./svgs/svg.module";
@@ -44,6 +44,7 @@ import { TriggerComponent } from "./tabs/trigger.component";
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     SvgModule,
     NgxPayPalModule,
     SpeechSynthesisModule.forRoot({

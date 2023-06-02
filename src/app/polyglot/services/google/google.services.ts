@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { GoogleObj } from "src/app/models/googleobj.model";
 
 @Injectable()
 export class GoogleService {
@@ -12,14 +13,3 @@ export class GoogleService {
   }
 }
 
-export class GoogleObj {
-  switch: boolean = false;
-  format: string = "text";
-  q: string;
-  source: string = "en";
-  target: string = "es";
-  result: string;
-  voice0: object = null;
-  voice1: object = null;
-  voices: object[] = [];
-}

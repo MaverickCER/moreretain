@@ -8,26 +8,8 @@ import { SpeechRecognitionService } from "@kamiazya/ngx-speech-recognition";
 })
 export class RecogComponent {
   public started = false;
-  @Input() content;
-  @Input("voice") language = {
-    voiceURI: "Google US English",
-    name: "Google US English",
-    lang: "en-US",
-    localService: false,
-    default: true
-  };
-  _content: any = "";
-
-  @Output() contentChange = new EventEmitter();
-
-  // get content() {
-  //   return this._content;
-  // }
-
-  // set content(value: any) {
-  //   this.contentChange.emit(value);
-  //   this._content = value;
-  // }
+  @Input() content: string;
+  @Input() voice: SpeechSynthesisVoice;
 
   constructor(private service: SpeechRecognitionService) {
     this.service.onstart = (e) => {
@@ -35,23 +17,20 @@ export class RecogComponent {
     };
     this.service.onresult = (e) => {
       if (this.content == null) {
-        this._content = e.results[e.results.length - 1].item(0).transcript;
+        this.content = e.results[e.results.length - 1].item(0).transcript;
       } else {
-        this._content =
-          this.content + e.results[e.results.length - 1].item(0).transcript;
+        this.content = this.content + e.results[e.results.length - 1].item(0).transcript;
       }
-      this.contentChange.emit(this._content);
     };
     this.service.onend = (e) => {
-      this._content = this.content + " ";
-      this.contentChange.emit(this._content);
+      this.content = this.content + " ";
       this.started = false;
     };
   }
 
   public start() {
     try {
-      this.service.lang = this.language.lang;
+      this.service.lang = this.voice.lang;
     } catch (error) {
       return alert("Select Language");
     }

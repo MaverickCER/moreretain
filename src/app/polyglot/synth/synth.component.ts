@@ -12,7 +12,7 @@ import {
 export class SynthComponent {
   public playing = false;
   @Input() content: string;
-  @Input() voice: any;
+  @Input() voice: SpeechSynthesisVoice;
 
   constructor(
     public f: SpeechSynthesisUtteranceFactoryService,

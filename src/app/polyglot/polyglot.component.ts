@@ -8,10 +8,12 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { SpeechSynthesisService } from '@kamiazya/ngx-speech-synthesis';
-import { GoogleObj } from './services/google/google.services';
 import { TriggerComponent } from './tabs/trigger.component';
 import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { SharedService } from "src/app/shared.service";
+import { User } from '../models/user.model';
+import { GoogleObj } from '../models/googleobj.model';
 
 @Component({
   selector: 'polyglot',
@@ -19,19 +21,23 @@ import { AngularFireDatabase } from '@angular/fire/database';
   styleUrls: ['./polyglot.component.less'],
 })
 export class PolyglotComponent implements OnInit, AfterViewInit {
-  @Input() user: any = {};
   public payPalConfig?: IPayPalConfig;
-  googleObj: GoogleObj = new GoogleObj();
-  voices = [];
+  googleObj: GoogleObj;
+  user: User;
+  voices: SpeechSynthesisVoice[] = [];
 
-  constructor(public svc: SpeechSynthesisService, public db: AngularFireDatabase) {}
+  constructor(public svc: SpeechSynthesisService, public db: AngularFireDatabase, private sharedService: SharedService) {
+    this.sharedService.userDataSubject.subscribe((user: User) => this.user = user);
+    this.sharedService.googleObjSubject.subscribe((googleObj: GoogleObj) => this.googleObj = googleObj);
+  }
 
   ngOnInit(): void {
     this.initPaypalConfig();
-    this.voices = this.svc.getVoices();
+    this.svc.getVoices();
     this.svc.onvoiceschanged = () => {
       let localVoices = this.svc.getVoices();
       this.voices = localVoices;
+      this.sharedService.voicesSubject.next(this.voices);
       let source = localVoices.findIndex((voice) => {
         let language = voice.lang.split('-')[0];
         if (this.googleObj.source === language) {
@@ -48,6 +54,7 @@ export class PolyglotComponent implements OnInit, AfterViewInit {
       });
       this.googleObj.voice0 = localVoices[source || 0] || null;
       this.googleObj.voice1 = localVoices[target || 0] || null;
+      this.sharedService.googleObjSubject.next(this.googleObj);
     };
   }
 
@@ -109,14 +116,14 @@ export class PolyglotComponent implements OnInit, AfterViewInit {
           purchase_units: [
             {
               amount: {
-                  currency_code: 'USD',
-                  value: '0.99',
-                  breakdown: {
-                      item_total: {
-                          currency_code: 'USD',
-                          value: '0.99'
-                      }
+                currency_code: 'USD',
+                value: '0.99',
+                breakdown: {
+                  item_total: {
+                    currency_code: 'USD',
+                    value: '0.99'
                   }
+                }
               },
               items: [
                 {
