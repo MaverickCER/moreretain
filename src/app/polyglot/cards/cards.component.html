@@ -1,6 +1,5 @@
-<small class="centered">Click to show translation, DoubleClick to change cards</small>
 <div class="cards">
-  <div [ngClass]="{'card ': true, 'revealed': revealed}" (click)="singleClick()" (dblclick)="doubleClick()">
+  <div [ngClass]="{'card ': true, 'revealed': revealed}">
     <div class="front">
       {{ cardFront }}
     </div>
@@ -10,15 +9,12 @@
   </div>
 </div>
 <br/>
-<recog *ngIf="!revealed" [voice]="googleObj.voice0" [content]="result"></recog>
-<recog *ngIf="revealed" [voice]="googleObj.voice1" [content]="result"></recog>
-<synth *ngIf="!revealed" [voice]="googleObj.voice1" [content]="cardFront"></synth>
-<synth *ngIf="revealed" [voice]="googleObj.voice0" [content]="cardBack"></synth>
-<br/>
+<p class="cards-label">Use this input to practice spelling or pronunciation</p>
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-  <label>
-    <p class="cards-label">Use this input to practice spelling or pronunciation</p>
+  <label aria-label="Use this input to practice spelling or pronunciation">
     <input type="text" placeholder={{placeholder}} aria-autocomplete="none" autocomplete="off" name="cards-input" [(ngModel)]="result" />
   </label>
-  <input type="submit" label="Submit" />
+  <synth [voice]="googleObj.voice1" [content]="cardFront"></synth>
+  <recog [voice]="googleObj.voice1" [(content)]="result"></recog>
+  <button type="submit" class="btn" aria-label="Submit"><send-svg></send-svg></button>
 </form>

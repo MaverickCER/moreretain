@@ -3,12 +3,12 @@
   <textarea class="form-textarea" [(ngModel)]="result"></textarea>
 </label>
 <br />
-<div class="grid tl">
-  <recog class="grid-item 1/5" [voice]="googleObj.voice1" [(content)]="googleObj.result"></recog>
-  <synth class="grid-item 1/5" [voice]="googleObj.voice1" [content]="googleObj.result"></synth>
-  <copy class="grid-item 1/5" [content]="googleObj.result"></copy>
-  <div class="grid-item 1/5"></div>
-  <div class="grid-item 1/5 tr">
+<div class="grid-5">
+  <recog [voice]="googleObj.voice1" [(content)]="googleObj.result"></recog>
+  <synth [voice]="googleObj.voice1" [content]="googleObj.result"></synth>
+  <copy [content]="googleObj.result"></copy>
+  <div></div>
+  <div>
     <button class="btn" (click)="clear()">
       <trash-svg></trash-svg>
     </button>

@@ -1,6 +1,6 @@
-<button class="btn" *ngIf="!started" (click)="start()">
+<button class="btn" *ngIf="!started" (click)="start($event)" type="button">
   <mic-svg></mic-svg>
 </button>
-<button class="btn" *ngIf="started" (click)="stop()">
+<button class="btn" *ngIf="started" (click)="stop($event)" type="button">
   <mute-svg></mute-svg>
 </button>

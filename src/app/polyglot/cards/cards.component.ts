@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component } from "@angular/core";
 import { AngularFireDatabase } from '@angular/fire/database';
-import { BehaviorSubject, forkJoin, zip } from "rxjs";
 import { GoogleObj } from "src/app/models/googleobj.model";
 import { User } from "src/app/models/user.model";
 import { SharedService } from "src/app/shared.service";
@@ -46,17 +45,6 @@ export class CardsComponent {
       this.user = userData;
       this.getData();
     });
-    // const observable$ = zip(this.sharedService.googleObjSubject, this.sharedService.userDataSubject);
-
-
-    // observable$.subscribe(
-    //   (data) => {
-    //     this.googleObj = data[0];
-    //     this.user = data[1];
-    //     this.getData();
-    //   }
-    // )
-
   }
 
   get result() {
@@ -65,7 +53,6 @@ export class CardsComponent {
 
   set result(value) {
     this.googleObj.result = value;
-    this.sharedService.googleObjSubject.next(this.googleObj);
   }
 
   ngOnInit() {
@@ -85,47 +72,28 @@ export class CardsComponent {
     }
   }
 
-  singleClick() {
-    this.timer = undefined;
-    this.preventSimpleClick = false;
-    let delay = 500;
-
-    this.timer = setTimeout(() => {
-      if (!this.preventSimpleClick) {
-        this.revealed = !this.revealed;
-      }
-    }, delay);
-  }
-
-  doubleClick() {
-    this.preventSimpleClick = true;
-    clearTimeout(this.timer);
-    let index = Math.floor(Math.random() * this.cards.length);
-    let key = Object.keys(this.cards[index])[0];
-    let value = Object.values(this.cards[index])[0];
-    this.cardBack = this.revealed ? value : key;
-    this.cardFront = this.revealed ? key : value;
-  }
-
   remove(key) {
     this.db.list(`history/${this.user.uid}/${this.googleObj.target}`).remove(key);
   }
 
   onSubmit(e) {
-    let value = this.googleObj.result?.trim()?.toLowerCase();
-    if (!value) {
+    let value = this.googleObj.result?.trim()?.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    if (value) {
+      if (value === this.cardFront || value === this.cardBack) {
+        this.placeholder = "Correct :)"
+      } else {
+        this.placeholder = "Incorrect :("
+      }
+      this.googleObj.result = "";
+      this.revealed = !this.revealed;
+    } else {      
       this.placeholder = "";
-      return this.doubleClick();
+      let index = Math.floor(Math.random() * this.cards.length);
+      let key = Object.keys(this.cards[index])[0];
+      let value = Object.values(this.cards[index])[0];
+      this.cardBack = this.revealed ? value : key;
+      this.cardFront = this.revealed ? key : value;
     }
-    let translation = this.revealed ? this.cardFront : this.cardBack;
-    if (value === translation) {
-      this.placeholder = "Correct :)"
-    } else {
-      this.placeholder = "Incorrect :("
-    }
-    this.googleObj.result = "";
-    // this.googleObjChange.emit(this.googleObj);
-    this.revealed = !this.revealed;
   }
 }
 

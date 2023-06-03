@@ -1,6 +1,9 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component } from "@angular/core";
 import { AngularFireDatabase } from '@angular/fire/database';
 import { GoogleService } from "../services/google/google.services";
+import { GoogleObj } from "src/app/models/googleobj.model";
+import { User } from "src/app/models/user.model";
+import { SharedService } from "src/app/shared.service";
 
 @Component({
   selector: "chat",
@@ -9,33 +12,61 @@ import { GoogleService } from "../services/google/google.services";
   providers: [GoogleService]
 })
 export class ChatComponent {
-  @Input() googleObj: any = {};
-  @Input() user: any = {};
-  @Input() voices: object[];
-  @Output() googleObjChange = new EventEmitter<object>();
+  googleObj: GoogleObj = {
+    switch: false,
+      format: "text",
+      q: "",
+      source: "en",
+      target: "es",
+      result: "",
+      voice0: {lang: ''},
+      voice1: {lang: ''},
+      voices: []
+  };
   messages = [];
+  user: User;
 
-  constructor(public db: AngularFireDatabase, private _google: GoogleService) {}
+  constructor(public db: AngularFireDatabase, private _google: GoogleService, private sharedService: SharedService) {
+    // this.googleObj = this.sharedService.googleObjSubject.value;
+    this.sharedService.googleObjSubject.subscribe((googleObj: GoogleObj) => {
+      //Check if value of secondary language is changed or not.
+      if (this.googleObj.voice1.lang !== (googleObj.voice1 ?? googleObj.voice1.lang)) {
+        this.googleObj = {...googleObj};
+        this.googleObj.target = googleObj.voice1.lang.slice(0, 2);
+        this.getData();
+      }
+    });
+    this.sharedService.userDataSubject.subscribe((userData: User) => {
+      this.user = userData;
+      this.getData();
+    });
+  }
 
   get result() {
     return this.googleObj.result;
   }
 
   set result(value) {
-    this.googleObj.result = new String(value);
-    this.googleObjChange.emit(this.googleObj);
+    this.googleObj.result = value;
+    this.sharedService.googleObjSubject.next(this.googleObj);
   }
 
   ngOnInit(): void {
-    this.db.list(`messages/${this.googleObj.target}`, ref => ref.orderByChild('createdAt')).valueChanges().subscribe(((messagesData: any) => {
-      this.messages = messagesData;
-    }));
+    this.getData();
+  }
+
+  getData() {
+    if (this.user && this.user.uid && this.googleObj && this.googleObj.source && this.googleObj.target) {
+      this.db.list(`messages/${this.googleObj.target}`, ref => ref.orderByChild('createdAt').limitToLast(5)).valueChanges().subscribe(((messagesData: any) => {
+        this.messages = messagesData;
+      }));
+    }
   }
 
   updateHistory(key, value) {
     if (typeof key !== 'string' || typeof value !== 'string') return;
-    this.db.list(`history/${this.user.uid}/${this.googleObj.source}`).update(this.googleObj.target, { [key.toLowerCase()]: value.toLowerCase() });
-    this.db.list(`history/${this.user.uid}/${this.googleObj.target}`).update(this.googleObj.source, { [value.toLowerCase()]: key.toLowerCase() });
+    this.db.list(`history/${this.user.uid}/${this.googleObj.source}`).update(this.googleObj.target, { [key.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")]: value.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"") });
+    this.db.list(`history/${this.user.uid}/${this.googleObj.target}`).update(this.googleObj.source, { [value.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")]: key.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"") });
   }
 
   reveal(index) {
@@ -87,7 +118,6 @@ export class ChatComponent {
         }
       });
       this.googleObj.result = "";
-      this.googleObjChange.emit(this.googleObj);
     }
   }
 }

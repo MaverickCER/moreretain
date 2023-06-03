@@ -1,6 +1,6 @@
-<button class="btn" *ngIf="!playing" (click)="speech()">
+<button class="btn" *ngIf="!playing" (click)="speech($event)" type="button">
   <play-svg></play-svg>
 </button>
-<button class="btn" *ngIf="playing" (click)="cancel()">
+<button class="btn" *ngIf="playing" (click)="cancel($event)" type="button">
   <stop-svg></stop-svg>
 </button>

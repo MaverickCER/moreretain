@@ -23,7 +23,9 @@ export class DashboardComponent implements OnInit {
         if (!userData) {
           this.logout();
         }
+        userData.displayName = userData.displayName.split(' ')[0]
         this.user = userData;
+        console.error(this.user);
         this.sharedService.userDataSubject.next(this.user);
       }));
     });

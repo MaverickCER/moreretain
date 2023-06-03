@@ -19,7 +19,7 @@
     <a href="https://github.com/MaverickCER/MoreRetain"><strong>Explore the MoreRetain development code »</strong></a>
     <br />
     <br />
-    <a href="https://www.maverickcer.dev">View Portfolio</a>
+    <a href="https://www.maverickcer.com">View Portfolio</a>
     ·
     <a href="https://github.com/MaverickCER/MoreRetain/issues">Report Bug</a>
     ·
@@ -62,7 +62,7 @@ Cons:
 
 The development code can be found at [https://github.com/MaverickCER/MoreRetain](https://github.com/MaverickCER/MoreRetain)<br/>
 The online IDE can be found at [https://codesandbox.io/s/MoreRetain-t37ey](https://codesandbox.io/s/MoreRetain-t37ey)<br/>
-The live site is available at [https://www.maverickcer.dev](https://www.maverickcer.dev)
+The live site is available at [https://www.maverickcer.com](https://www.maverickcer.com)
 
 ### Built With
 
@@ -95,7 +95,7 @@ If you have suggestions, they can be added to [Issues](https://github.com/Maveri
 ## Contact
 
 Maverick Manasco - @MaverickCER<br/>
-[<img src="https://i.imgur.com/ug3iVUk.png" alt="https://www.maverickcer.dev" width="auto" height="24px">](https://www.maverickcer.dev) 
+[<img src="https://i.imgur.com/ug3iVUk.png" alt="https://www.maverickcer.com" width="auto" height="24px">](https://www.maverickcer.com) 
 [![maverickcer@gmail.com](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Email-24.png)](mailto:maverickcer@gmail.com) 
 [![CodePen](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Codepen-24.png)](https://codepen.io/maverickcer) 
 [<img src="https://i.imgur.com/QAFF9m4.png" alt="CodeSandbox" width="auto" height="24px">](https://codesandbox.io/u/MaverickCER) 

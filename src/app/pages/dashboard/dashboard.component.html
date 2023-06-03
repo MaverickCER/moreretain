@@ -17,8 +17,8 @@
     </span>
     <nav class="header__nav">
       <ul class="header__nav-list" role="tree">
-        <li class="header__nav-li" *ngIf="auth.user | async as userData; else showLogin">
-          <span (click)="logout()" class="header__nav-link ws-nowrap">{{ userData.displayName }} - Log Out</span>
+        <li class="header__nav-li" *ngIf="user; else showLogin">
+          <span (click)="logout()" class="header__nav-link ws-nowrap">{{ user.displayName }} - Log Out</span>
         </li>
       </ul>
     </nav>
@@ -35,12 +35,12 @@
 </main>
 <footer class="footer__wrapper">
   <section class="footer__banner">
-    <a href="https://www.maverickcer.dev" class="footer__logo">MaverickCER</a>
+    <a href="https://www.maverickcer.com" class="footer__logo">MaverickCER</a>
     <nav class="footer__nav">
       <ul class="footer__nav-list" role="tree">
         <li class="footer__nav-li">
           <a
-            href="https://www.maverickcer.dev"
+            href="https://www.maverickcer.com"
             target="_blank"
             rel="noreferrer"
             class="footer__nav-link"

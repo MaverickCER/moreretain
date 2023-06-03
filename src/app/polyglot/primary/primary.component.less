@@ -6,6 +6,20 @@ p.primary-label {
   margin: 0;
 }
 
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-5 > *:last-child {
+  display: grid;
+  justify-content: flex-end;
+}
+
+.grid-5 ::ng-deep .btn {
+  height: 40px;
+}
+
 @media screen and (max-width: 550px) {
   .form-textarea {
     height: 8rem;

@@ -127,7 +127,7 @@ export class PolyglotComponent implements OnInit, AfterViewInit {
               },
               items: [
                 {
-                  name: 'MoreRetain Translation Characters - 2500',
+                  name: 'MoreRetain Translation Characters - 2000',
                   quantity: '1',
                   category: 'DIGITAL_GOODS',
                   unit_amount: {
@@ -147,7 +147,7 @@ export class PolyglotComponent implements OnInit, AfterViewInit {
         layout: 'vertical',
       },
       onClientAuthorization: (data) => {
-        this.db.list(`users`).update(this.user.uid, { characters: this.user.characters + 2500 });
+        this.db.list(`users`).update(this.user.uid, { characters: this.user.characters + 2000 });
       },
       onCancel: (data, actions) => {
         console.log('OnCancel', data, actions);

@@ -7,6 +7,7 @@ import { MuteSVGComponent } from "./mute.component";
 import { PaySVGComponent } from "./pay.component";
 import { PlaySVGComponent } from "./play.component";
 import { RepeatSVGComponent } from "./repeat.component";
+import { SendSVGComponent } from "./send.component";
 import { StopSVGComponent } from "./stop.component";
 import { TranslateSVGComponent } from "./translate.component";
 import { TrashSVGComponent } from "./trash.component";
@@ -21,6 +22,7 @@ import { UserSVGComponent } from "./user.component";
     PaySVGComponent,
     PlaySVGComponent,
     RepeatSVGComponent,
+    SendSVGComponent,
     StopSVGComponent,
     TranslateSVGComponent,
     TrashSVGComponent,
@@ -34,6 +36,7 @@ import { UserSVGComponent } from "./user.component";
     PaySVGComponent,
     PlaySVGComponent,
     RepeatSVGComponent,
+    SendSVGComponent,
     StopSVGComponent,
     TranslateSVGComponent,
     TrashSVGComponent,

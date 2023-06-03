@@ -22,8 +22,8 @@ export class TransComponent {
 
   updateHistory(key, value) {
     if (typeof key !== 'string' || typeof value !== 'string') return;
-    this.db.list(`history/${this.user.uid}/${this.googleObj.source}`).update(this.googleObj.target, { [key.toLowerCase()]: value.toLowerCase() });
-    this.db.list(`history/${this.user.uid}/${this.googleObj.target}`).update(this.googleObj.source, { [value.toLowerCase()]: key.toLowerCase() });
+    this.db.list(`history/${this.user.uid}/${this.googleObj.source}`).update(this.googleObj.target, { [key.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")]: value.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"") });
+    this.db.list(`history/${this.user.uid}/${this.googleObj.target}`).update(this.googleObj.source, { [value.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")]: key.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"") });
   }
 
   translate() {

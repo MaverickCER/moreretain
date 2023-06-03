@@ -10,6 +10,7 @@ export class RecogComponent {
   public started = false;
   @Input() content: string;
   @Input() voice: SpeechSynthesisVoice;
+  @Output() contentChange = new EventEmitter<string>();
 
   constructor(private service: SpeechRecognitionService) {
     this.service.onstart = (e) => {
@@ -25,10 +26,13 @@ export class RecogComponent {
     this.service.onend = (e) => {
       this.content = this.content + " ";
       this.started = false;
+      this.contentChange.emit(this.content)
     };
   }
 
-  public start() {
+  public start(e) {
+    e.preventDefault();
+    e.stopPropagation();
     try {
       this.service.lang = this.voice.lang;
     } catch (error) {
@@ -38,7 +42,9 @@ export class RecogComponent {
     this.service.start();
   }
 
-  public stop() {
+  public stop(e) {
+    e.preventDefault();
+    e.stopPropagation();
     this.service.stop();
   }
 }

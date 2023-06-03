@@ -19,7 +19,9 @@ export class SynthComponent {
     public svc: SpeechSynthesisService
   ) {}
 
-  speech() {
+  speech(e) {
+    e.preventDefault();
+    e.stopPropagation();
     if (!this.content || this.content === "") return;
     this.svc.cancel();
     this.playing = true;
@@ -33,7 +35,9 @@ export class SynthComponent {
     }, 100);
   }
 
-  cancel() {
+  cancel(e) {
+    e.preventDefault();
+    e.stopPropagation();
     this.svc.cancel();
     this.playing = false;
   }

@@ -19,13 +19,11 @@
   </ng-container>
 </div>
 <br/>
-<recog [voice]="googleObj.voice1" [(content)]="result"></recog>
-<br/>
+<p class="chat-label">Only send messages in their language!</p>
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <label>
-    <p class="chat-label">Only send messages in their language!</p>
     <input type="text" aria-autocomplete="none" autocomplete="off" name="chat-input" [(ngModel)]="result" />
   </label>
-
-  <input type="submit" label="Submit" />
+  <recog [voice]="googleObj.voice1" [(content)]="result"></recog>
+  <button type="submit" class="btn" aria-label="Submit"><send-svg></send-svg></button>
 </form>
