@@ -38,6 +38,7 @@ export class TransComponent {
         (res: any) => {
           this.googleObj.result = res.data.translations[0].translatedText;
           this.updateHistory(this.googleObj.q, this.googleObj.result);
+          this.db.list(`users`).update(this.user.uid, { 'characters': this.user.characters - this.googleObj.q.length });
         },
         (error) => {
           this.googleObj.result = error.message;
