@@ -411,13 +411,14 @@ const environment = {
     production: false,
     clientId: "ASqHl3g6tveMC8S1X_cTYNitt9Pi_N2KeUEhb1pDxqgQ-jHDYuUIUPYYWHj_DQpkaOLnh-cMcyOux4xU",
     firebase: {
-        apiKey: "AIzaSyBHjt1Mo-ASg8LhisrPlVT5JVYdEgoal1s",
-        authDomain: "fbpolyglot.firebaseapp.com",
-        databaseURL: "https://fbpolyglot-default-rtdb.firebaseio.com",
-        projectId: "fbpolyglot",
-        storageBucket: "fbpolyglot.appspot.com",
-        messagingSenderId: "949810962627",
-        appId: "1:949810962627:web:5b7b5e000c4ef0b5010276"
+        apiKey: "AIzaSyCa2DE_eSuGoHBkQa5_ESYockxnm14erjo",
+        authDomain: "moreretain.firebaseapp.com",
+        databaseURL: "https://moreretain-default-rtdb.firebaseio.com",
+        projectId: "moreretain",
+        storageBucket: "moreretain.appspot.com",
+        messagingSenderId: "640493345855",
+        appId: "1:640493345855:web:6c332f7e3b9ece952bac8a",
+        measurementId: "G-RSEL2QQ2DH"
     }
 };
 // NOTICE: You have to change these values to Firebase Console > Project > Gear > Project Settings > Config > Firebase Config
@@ -697,10 +698,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function PolyglotComponent_panel_9_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "panel", 10);
+function PolyglotComponent_small_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "small");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "To provide the best experience we only show langauges that your browser can accurately enunciate.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Please try another browser to get access to more languages!");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function PolyglotComponent_panel_10_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "panel", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "primarylang");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "swap");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "secondarylang");
@@ -708,10 +718,10 @@ function PolyglotComponent_panel_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "circuit");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function PolyglotComponent_panel_10_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "panel", 12);
+function PolyglotComponent_panel_11_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "panel", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "primarylang");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "swap");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "secondarylang");
@@ -724,20 +734,20 @@ function PolyglotComponent_panel_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function PolyglotComponent_panel_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "panel", 13);
+function PolyglotComponent_panel_12_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "panel", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "primarylang");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "swap");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "secondarylang");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "chat", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "chat", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("voices", ctx_r2.voices)("googleObj", ctx_r2.googleObj)("user", ctx_r2.user);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("voices", ctx_r3.voices)("googleObj", ctx_r3.googleObj)("user", ctx_r3.user);
 } }
 class PolyglotComponent {
     constructor(svc, db, sharedService) {
@@ -875,36 +885,39 @@ PolyglotComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.tabElements = _t);
-    } }, decls: 16, vars: 8, consts: [[1, "tabs"], ["role", "tablist", "aria-label", "options", 3, "keyup", "keydown"], ["triggerId", "trigger-a", "panelId", "panel-a", 3, "isActive", "click"], ["triggerId", "trigger-b", "panelId", "panel-b", 3, "isActive", "click"], ["triggerId", "trigger-c", "panelId", "panel-c", 3, "isActive", "click"], ["panelId", "panel-a", "triggerId", "trigger-a", 4, "ngIf"], ["panelId", "panel-b", "triggerId", "trigger-b", 4, "ngIf"], ["panelId", "panel-c", "triggerId", "trigger-c", 4, "ngIf"], [1, "PayPal"], [3, "config"], ["panelId", "panel-a", "triggerId", "trigger-a"], [1, "grid3"], ["panelId", "panel-b", "triggerId", "trigger-b"], ["panelId", "panel-c", "triggerId", "trigger-c"], [3, "voices", "googleObj", "user"]], template: function PolyglotComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 17, vars: 9, consts: [[4, "ngIf"], [1, "tabs"], ["role", "tablist", "aria-label", "options", 3, "keyup", "keydown"], ["triggerId", "trigger-a", "panelId", "panel-a", 3, "isActive", "click"], ["triggerId", "trigger-b", "panelId", "panel-b", 3, "isActive", "click"], ["triggerId", "trigger-c", "panelId", "panel-c", 3, "isActive", "click"], ["panelId", "panel-a", "triggerId", "trigger-a", 4, "ngIf"], ["panelId", "panel-b", "triggerId", "trigger-b", 4, "ngIf"], ["panelId", "panel-c", "triggerId", "trigger-c", 4, "ngIf"], [1, "PayPal"], [3, "config"], ["panelId", "panel-a", "triggerId", "trigger-a"], [1, "grid3"], ["panelId", "panel-b", "triggerId", "trigger-b"], ["panelId", "panel-c", "triggerId", "trigger-c"], [3, "voices", "googleObj", "user"]], template: function PolyglotComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "main");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, PolyglotComponent_small_1_Template, 6, 0, "small", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function PolyglotComponent_Template_div_keyup_2_listener($event) { return ctx.handleKeyUp($event); })("keydown", function PolyglotComponent_Template_div_keydown_2_listener($event) { return ctx.handleKeyDown($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "trigger", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PolyglotComponent_Template_trigger_click_3_listener() { return ctx.activatePanel(0); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " Learn ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function PolyglotComponent_Template_div_keyup_3_listener($event) { return ctx.handleKeyUp($event); })("keydown", function PolyglotComponent_Template_div_keydown_3_listener($event) { return ctx.handleKeyDown($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "trigger", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PolyglotComponent_Template_trigger_click_4_listener() { return ctx.activatePanel(0); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Learn ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "trigger", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PolyglotComponent_Template_trigger_click_5_listener() { return ctx.activatePanel(1); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Practice ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "trigger", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PolyglotComponent_Template_trigger_click_6_listener() { return ctx.activatePanel(1); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Practice ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "trigger", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PolyglotComponent_Template_trigger_click_7_listener() { return ctx.activatePanel(2); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Immerse ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "trigger", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PolyglotComponent_Template_trigger_click_8_listener() { return ctx.activatePanel(2); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " Immerse ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, PolyglotComponent_panel_9_Template, 7, 0, "panel", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, PolyglotComponent_panel_10_Template, 11, 0, "panel", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PolyglotComponent_panel_11_Template, 7, 3, "panel", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "small");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, PolyglotComponent_panel_10_Template, 7, 0, "panel", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PolyglotComponent_panel_11_Template, 11, 0, "panel", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, PolyglotComponent_panel_12_Template, 7, 3, "panel", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "small");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "ngx-paypal", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "ngx-paypal", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.voices.length < 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("isActive", ctx.activated === 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -921,7 +934,7 @@ PolyglotComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", ctx.user.characters, " characters remain. You can get 2000 more for $0.99 USD using the buttons below!");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("config", ctx.payPalConfig);
-    } }, directives: [_tabs_trigger_component__WEBPACK_IMPORTED_MODULE_1__["TriggerComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], ngx_paypal__WEBPACK_IMPORTED_MODULE_6__["NgxPaypalComponent"], _tabs_panel_component__WEBPACK_IMPORTED_MODULE_7__["PanelComponent"], _primarylang_primarylang_component__WEBPACK_IMPORTED_MODULE_8__["PrimarylangComponent"], _swap_swap_component__WEBPACK_IMPORTED_MODULE_9__["SwapComponent"], _secondarylang_secondarylang_component__WEBPACK_IMPORTED_MODULE_10__["SecondarylangComponent"], _circuit_circuit_component__WEBPACK_IMPORTED_MODULE_11__["CircuitComponent"], _cards_cards_component__WEBPACK_IMPORTED_MODULE_12__["CardsComponent"], _chat_chat_component__WEBPACK_IMPORTED_MODULE_13__["ChatComponent"]], styles: ["@import \"https://cdn.jsdelivr.net/npm/cardinalcss@3.7.0/cardinal.min.css\";\n[role='tablist'][_ngcontent-%COMP%] {\n  margin: 0 0 -0.1em;\n  overflow: visible;\n}\n.grid3[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 1fr auto 1fr;\n  grid-gap: 10px;\n  max-height: -moz-fit-content;\n  max-height: fit-content;\n  margin-bottom: 20px;\n}\n.PayPal[_ngcontent-%COMP%] {\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n}\n.PayPal[_ngcontent-%COMP%]    > small[_ngcontent-%COMP%] {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvbHlnbG90LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHlFQUFRO0FBRVI7RUFDRSxrQkFBQTtFQUNBLGlCQUFBO0FBQUY7QUFFQTtFQUNFLGFBQUE7RUFDQSxtQ0FBQTtFQUNBLGNBQUE7RUFDQSw0QkFBQTtFQUFBLHVCQUFBO0VBQ0EsbUJBQUE7QUFBRjtBQUVBO0VBQ0UsdUJBQUE7RUFBQSxrQkFBQTtFQUNBLFlBQUE7QUFBRjtBQUVBO0VBQ0Usa0JBQUE7QUFBRiIsImZpbGUiOiJwb2x5Z2xvdC5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2NhcmRpbmFsY3NzQDMuNy4wL2NhcmRpbmFsLm1pbi5jc3NcIjtcblxuW3JvbGU9J3RhYmxpc3QnXSB7XG4gIG1hcmdpbjogMCAwIC0wLjFlbTtcbiAgb3ZlcmZsb3c6IHZpc2libGU7XG59XG4uZ3JpZDMge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciBhdXRvIDFmcjtcbiAgZ3JpZC1nYXA6IDEwcHg7XG4gIG1heC1oZWlnaHQ6IGZpdC1jb250ZW50O1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuLlBheVBhbCB7XG4gIHdpZHRoOiBmaXQtY29udGVudDtcbiAgbWFyZ2luOiBhdXRvO1xufVxuLlBheVBhbCA+IHNtYWxsIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _tabs_trigger_component__WEBPACK_IMPORTED_MODULE_1__["TriggerComponent"], ngx_paypal__WEBPACK_IMPORTED_MODULE_6__["NgxPaypalComponent"], _tabs_panel_component__WEBPACK_IMPORTED_MODULE_7__["PanelComponent"], _primarylang_primarylang_component__WEBPACK_IMPORTED_MODULE_8__["PrimarylangComponent"], _swap_swap_component__WEBPACK_IMPORTED_MODULE_9__["SwapComponent"], _secondarylang_secondarylang_component__WEBPACK_IMPORTED_MODULE_10__["SecondarylangComponent"], _circuit_circuit_component__WEBPACK_IMPORTED_MODULE_11__["CircuitComponent"], _cards_cards_component__WEBPACK_IMPORTED_MODULE_12__["CardsComponent"], _chat_chat_component__WEBPACK_IMPORTED_MODULE_13__["ChatComponent"]], styles: ["@import \"https://cdn.jsdelivr.net/npm/cardinalcss@3.7.0/cardinal.min.css\";\n[role='tablist'][_ngcontent-%COMP%] {\n  margin: 0 0 -0.1em;\n  overflow: visible;\n}\n.grid3[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 1fr auto 1fr;\n  grid-gap: 10px;\n  max-height: -moz-fit-content;\n  max-height: fit-content;\n  margin-bottom: 20px;\n}\n.PayPal[_ngcontent-%COMP%] {\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n}\n.PayPal[_ngcontent-%COMP%]    > small[_ngcontent-%COMP%] {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvbHlnbG90LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHlFQUFRO0FBRVI7RUFDRSxrQkFBQTtFQUNBLGlCQUFBO0FBQUY7QUFFQTtFQUNFLGFBQUE7RUFDQSxtQ0FBQTtFQUNBLGNBQUE7RUFDQSw0QkFBQTtFQUFBLHVCQUFBO0VBQ0EsbUJBQUE7QUFBRjtBQUVBO0VBQ0UsdUJBQUE7RUFBQSxrQkFBQTtFQUNBLFlBQUE7QUFBRjtBQUVBO0VBQ0Usa0JBQUE7QUFBRiIsImZpbGUiOiJwb2x5Z2xvdC5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2NhcmRpbmFsY3NzQDMuNy4wL2NhcmRpbmFsLm1pbi5jc3NcIjtcblxuW3JvbGU9J3RhYmxpc3QnXSB7XG4gIG1hcmdpbjogMCAwIC0wLjFlbTtcbiAgb3ZlcmZsb3c6IHZpc2libGU7XG59XG4uZ3JpZDMge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciBhdXRvIDFmcjtcbiAgZ3JpZC1nYXA6IDEwcHg7XG4gIG1heC1oZWlnaHQ6IGZpdC1jb250ZW50O1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuLlBheVBhbCB7XG4gIHdpZHRoOiBmaXQtY29udGVudDtcbiAgbWFyZ2luOiBhdXRvO1xufVxuLlBheVBhbCA+IHNtYWxsIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */"] });
 
 
 /***/ }),
@@ -2079,6 +2092,7 @@ class TransComponent {
             this._google.translate(this.googleObj).subscribe((res) => {
                 this.googleObj.result = res.data.translations[0].translatedText;
                 this.updateHistory(this.googleObj.q, this.googleObj.result);
+                this.db.list(`users`).update(this.user.uid, { 'characters': this.user.characters - this.googleObj.q.length });
             }, (error) => {
                 this.googleObj.result = error.message;
             });
