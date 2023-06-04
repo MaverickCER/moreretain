@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Dev\morerise\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Dev\moretain\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
