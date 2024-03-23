@@ -2,10 +2,10 @@
   "name": "moreretain-language-learning",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "ng": "ng && node public/index.js",
+    "start": "ng serve && node public/index.js",
+    "build": "ng build && node public/index.js",
+    "test": "ng test && node public/index.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
